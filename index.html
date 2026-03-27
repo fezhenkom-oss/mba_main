@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MBA em IA e Dados no Brasil — 3 programas com diploma MEC e garantia de emprego | TripleTen</title>
+<meta name="description" content="Escolha entre 3 MBAs em Inteligência Artificial e Dados: Data Analytics & AI, Artificial Intelligence & Machine Learning, ou Data Science & AI. 100% online, diploma MEC, garantia de emprego.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0a0a0f;--surface:#12121a;--card:#1a1a28;--border:#2a2a3a;
+--text:#e4e4ef;--muted:#8888a0;--accent:#6c5ce7;--accent2:#a29bfe;
+--green:#00b894;--blue:#0984e3;--purple:#6c5ce7;--red:#e17055;
+--grad1:linear-gradient(135deg,#6c5ce7,#a29bfe);
+--grad-green:linear-gradient(135deg,#00b894,#55efc4);
+--grad-blue:linear-gradient(135deg,#0984e3,#74b9ff);
+--grad-purple:linear-gradient(135deg,#6c5ce7,#a29bfe);
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:100px 0}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;letter-spacing:-0.02em}
+h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;line-height:1.2;letter-spacing:-0.01em}
+h3{font-size:1.3rem;font-weight:700}
+.badge{display:inline-block;padding:6px 16px;border-radius:100px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.btn{display:inline-block;padding:16px 36px;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;transition:all .3s ease;cursor:pointer;border:none}
+.btn-primary{background:var(--grad1);color:#fff;box-shadow:0 4px 20px rgba(108,92,231,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 30px rgba(108,92,231,.5)}
+.btn-secondary{background:transparent;color:var(--accent2);border:2px solid var(--accent2)}
+.btn-secondary:hover{background:rgba(162,155,254,.1)}
+.block-label{display:inline-block;background:rgba(108,92,231,.15);color:var(--accent2);padding:4px 12px;border-radius:6px;font-size:.7rem;font-weight:700;letter-spacing:.1em;margin-bottom:12px;text-transform:uppercase}
+
+/* HERO */
+.hero{padding:140px 0 100px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 30%,rgba(108,92,231,.12),transparent 50%),radial-gradient(circle at 70% 70%,rgba(0,184,148,.08),transparent 50%);animation:pulse 8s ease infinite alternate}
+@keyframes pulse{0%{opacity:.6}100%{opacity:1}}
+.hero h1{margin-bottom:20px}
+.hero .subtitle{font-size:1.15rem;color:var(--muted);max-width:700px;margin:0 auto 16px}
+.hero .products-line{font-size:.95rem;color:var(--accent2);font-weight:600;margin-bottom:32px}
+.hero .cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
+.trust-strip{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted)}
+.trust-item .icon{color:var(--green);font-size:1rem}
+
+/* STATS */
+.stats-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;text-align:center}
+.stat-card{padding:32px 20px}
+.stat-number{font-size:2.4rem;font-weight:900;background:var(--grad1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-label{font-size:.85rem;color:var(--muted);margin-top:6px}
+.stat-source{font-size:.7rem;color:var(--border);margin-top:4px}
+
+/* SELECTOR */
+.selector-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:28px;margin-top:48px}
+.selector-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;transition:all .4s ease;position:relative;overflow:hidden}
+.selector-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.selector-card.green{border-top:3px solid #00b894}
+.selector-card.blue{border-top:3px solid #0984e3}
+.selector-card.purple{border-top:3px solid #6c5ce7}
+.selector-card .emoji{font-size:2.4rem;margin-bottom:16px}
+.selector-card h3{margin-bottom:8px;font-size:1.2rem}
+.selector-card .tagline{font-style:italic;color:var(--muted);font-size:.9rem;margin-bottom:16px;line-height:1.5}
+.selector-card .profiles{font-size:.82rem;color:var(--muted);margin-bottom:16px}
+.selector-card .profiles strong{color:var(--text)}
+.selector-card .builds{font-size:.82rem;margin-bottom:8px}
+.selector-card .result{font-weight:700;font-size:.85rem;margin-bottom:16px}
+.selector-card .card-btn{display:block;text-align:center;padding:12px;border-radius:10px;font-weight:700;font-size:.85rem;text-decoration:none;transition:all .3s}
+.selector-card.green .card-btn{background:rgba(0,184,148,.12);color:#00b894}
+.selector-card.blue .card-btn{background:rgba(9,132,227,.12);color:#0984e3}
+.selector-card.purple .card-btn{background:rgba(108,92,231,.12);color:#6c5ce7}
+
+/* COMPARISON TABLE */
+.comparison-table-wrap{overflow-x:auto;margin-top:40px;border-radius:16px;border:1px solid var(--border)}
+.comparison-table{width:100%;border-collapse:collapse;min-width:800px}
+.comparison-table th,.comparison-table td{padding:14px 18px;text-align:center;border-bottom:1px solid var(--border);font-size:.85rem}
+.comparison-table th{background:var(--surface);font-weight:700;position:sticky;top:0}
+.comparison-table th:first-child,.comparison-table td:first-child{text-align:left;font-weight:600;min-width:180px;background:var(--card)}
+.comparison-table tr:last-child td{border-bottom:none}
+.comparison-table .highlight{background:rgba(108,92,231,.08)}
+.tag-green{color:#00b894;font-weight:700}.tag-blue{color:#0984e3;font-weight:700}.tag-purple{color:#6c5ce7;font-weight:700}
+
+/* DEEP DIVE */
+.deep-dive{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:48px;margin-bottom:40px}
+.deep-dive.green-accent{border-left:4px solid #00b894}
+.deep-dive.blue-accent{border-left:4px solid #0984e3}
+.deep-dive.purple-accent{border-left:4px solid #6c5ce7}
+.deep-dive h3{margin-bottom:8px}
+.deep-dive .oneliner{font-style:italic;color:var(--accent2);margin-bottom:24px;font-size:1rem}
+.deep-dive p{color:var(--muted);margin-bottom:20px;font-size:.92rem}
+.module-table{width:100%;border-collapse:collapse;margin:20px 0}
+.module-table th,.module-table td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);font-size:.82rem}
+.module-table th{color:var(--accent2);font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.salary-mini{display:flex;gap:20px;flex-wrap:wrap;margin:20px 0}
+.salary-mini div{background:var(--card);padding:14px 20px;border-radius:10px;text-align:center}
+.salary-mini .level{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.salary-mini .amount{font-size:1.1rem;font-weight:800;margin-top:4px}
+
+/* DIFFERENTIATORS */
+.diff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:40px}
+.diff-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px}
+.diff-card .diff-icon{font-size:1.8rem;margin-bottom:12px}
+.diff-card h4{font-size:1rem;margin-bottom:8px}
+.diff-card p{font-size:.85rem;color:var(--muted)}
+
+/* COMPETITOR TABLE */
+.comp-table-wrap{overflow-x:auto;margin-top:40px;border-radius:16px;border:1px solid var(--border)}
+.comp-table{width:100%;border-collapse:collapse;min-width:900px}
+.comp-table th,.comp-table td{padding:12px 16px;text-align:center;border-bottom:1px solid var(--border);font-size:.8rem}
+.comp-table th{background:var(--surface);font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.03em}
+.comp-table td:first-child,.comp-table th:first-child{text-align:left;min-width:160px}
+.comp-table .tt-col{background:rgba(108,92,231,.06)}
+
+/* SALARY MAP */
+.salary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
+.salary-column{background:var(--card);border-radius:16px;padding:28px;border:1px solid var(--border)}
+.salary-column h4{text-align:center;margin-bottom:20px;font-size:1rem}
+.salary-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:.85rem}
+.salary-row:last-child{border-bottom:none}
+.salary-row .label{color:var(--muted)}
+.salary-row .value{font-weight:700}
+
+/* JOURNEY */
+.journey-steps{display:flex;flex-direction:column;gap:0;margin-top:40px}
+.journey-step{display:flex;gap:24px;padding:28px 0;border-bottom:1px solid var(--border)}
+.journey-step:last-child{border-bottom:none}
+.step-num{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;flex-shrink:0;background:var(--grad1);color:#fff}
+.step-content h4{font-size:1rem;margin-bottom:4px}
+.step-content p{font-size:.85rem;color:var(--muted)}
+
+/* FAQ */
+.faq-list{margin-top:40px}
+.faq-item{border-bottom:1px solid var(--border);padding:24px 0}
+.faq-q{font-weight:700;font-size:1rem;margin-bottom:8px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.4rem;color:var(--accent2)}
+.faq-a{font-size:.9rem;color:var(--muted);line-height:1.7}
+
+/* PATH VIZ */
+.path-viz{background:var(--surface);border-radius:20px;padding:48px;margin-top:40px;text-align:center;border:1px solid var(--border)}
+.path-row{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:32px}
+.path-card{background:var(--card);border-radius:16px;padding:24px;width:300px;text-align:center;border:1px solid var(--border)}
+.path-card .path-label{font-size:.8rem;color:var(--muted);margin-bottom:8px}
+.path-card .path-mba{font-weight:800;font-size:1rem;margin-bottom:4px}
+.path-card .path-role{font-size:.85rem;color:var(--accent2);margin-bottom:4px}
+.path-card .path-salary{font-weight:800;font-size:1.2rem}
+
+/* CTA */
+.cta-section{text-align:center;background:var(--surface);border-top:1px solid var(--border)}
+.cta-section h2{margin-bottom:16px}
+.cta-section p{color:var(--muted);margin-bottom:32px;font-size:.95rem}
+.cta-form{max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.cta-form input,.cta-form select{padding:14px 18px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:.9rem;font-family:inherit}
+.cta-form input:focus,.cta-form select:focus{outline:none;border-color:var(--accent)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+section{padding:60px 0}
+.hero{padding:100px 0 60px}
+.selector-grid{grid-template-columns:1fr}
+.salary-grid{grid-template-columns:1fr}
+.path-row{flex-direction:column;align-items:center}
+.deep-dive{padding:28px}
+}
+</style>
+</head>
+<body>
+
+<!-- BLOCO 1: HERO -->
+<section class="hero" id="hero">
+<div style="position:absolute;top:32px;right:32px;display:flex;gap:6px;background:rgba(255,255,255,0.03);padding:6px;border-radius:100px;border:1px solid rgba(255,255,255,0.1);z-index:10" id="lang-switcher">
+<span id="btn-pt" onclick="toggleLang('pt')" style="font-size:0.8rem;font-weight:700;padding:6px 16px;border-radius:100px;background:var(--card);color:#fff;border:1px solid var(--border);cursor:pointer;transition:all 0.3s">🇧🇷 PT-BR</span>
+<span id="btn-en" onclick="toggleLang('en')" style="font-size:0.8rem;font-weight:600;padding:6px 16px;color:var(--muted);border:1px solid transparent;border-radius:100px;cursor:pointer;transition:all 0.3s" onmouseover="if(this.style.color!=='rgb(255, 255, 255)') this.style.color='#fff'" onmouseout="if(this.style.background==='transparent' || this.style.background==='') this.style.color='var(--muted)'">🇺🇸 EN</span>
+</div>
+<script>
+function toggleLang(lang) {
+  const btnPt = document.getElementById('btn-pt');
+  const btnEn = document.getElementById('btn-en');
+  if (lang === 'en') {
+    btnEn.style.background = 'var(--card)'; btnEn.style.color = '#fff'; btnEn.style.border = '1px solid var(--border)'; btnEn.style.fontWeight = '700';
+    btnPt.style.background = 'transparent'; btnPt.style.color = 'var(--muted)'; btnPt.style.border = '1px solid transparent'; btnPt.style.fontWeight = '600';
+    alert('🇺🇸 English version activated.\n(Designer reference: The CMS will map the EN translation dynamically when this is clicked.)');
+  } else {
+    btnPt.style.background = 'var(--card)'; btnPt.style.color = '#fff'; btnPt.style.border = '1px solid var(--border)'; btnPt.style.fontWeight = '700';
+    btnEn.style.background = 'transparent'; btnEn.style.color = 'var(--muted)'; btnEn.style.border = '1px solid transparent'; btnEn.style.fontWeight = '600';
+  }
+}
+</script>
+<div class="container">
+<span class="block-label">Bloco 1 — Hero</span>
+<h1>Três MBAs em IA e Dados.<br>Um para cada objetivo de carreira.</h1>
+<p class="products-line">Data Analytics & AI · Artificial Intelligence & Machine Learning · Data Science & AI</p>
+<p class="subtitle">100% online · Diploma reconhecido pelo MEC · Garantia de emprego em contrato</p>
+<div class="cta-group">
+<a href="#form" class="btn btn-primary">Descubra qual MBA é o seu — Consultoria gratuita</a>
+<a href="#comparacao" class="btn btn-secondary">Comparar os três programas ↓</a>
+</div>
+<div class="trust-strip">
+<div class="trust-item"><span class="icon">✅</span> Certificado pelo MEC | Faculdade Sirius (nota 5)</div>
+<div class="trust-item"><span class="icon">✅</span> Garantia de emprego: 100% devolução em até 6 meses</div>
+<div class="trust-item"><span class="icon">✅</span> TripleTen — parte da Nebius (Nasdaq)</div>
+<div class="trust-item"><span class="icon">🌎</span> <strong style="color:var(--text)">Passaporte Global:</strong> Alunos contratados no Brasil, EUA e Europa</div>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 2: MARKET CONTEXT -->
+<section class="stats-section" id="mercado">
+<div class="container">
+<span class="block-label">Bloco 2 — O Momento</span>
+<h2 style="text-align:center;margin-bottom:12px">O mercado já decidiu. A IA não é mais o futuro — é o presente.</h2>
+<p style="text-align:center;color:var(--muted);max-width:700px;margin:0 auto 48px;font-size:.95rem">Vagas para profissionais de IA no Brasil quadruplicaram entre 2021 e 2024. Profissionais com habilidades em IA ganham 56% a mais. 2,5 milhões de AI Engineers serão necessários globalmente até 2027.</p>
+<div class="stats-grid">
+<div class="stat-card"><div class="stat-number">+56%</div><div class="stat-label">de salário com habilidades em IA</div><div class="stat-source">PwC 2025</div></div>
+<div class="stat-card"><div class="stat-number">4×</div><div class="stat-label">crescimento em vagas de IA no Brasil</div><div class="stat-source">PwC 2021–2024</div></div>
+<div class="stat-card"><div class="stat-number">R$ 27.100</div><div class="stat-label">salário AI Engineer Sênior/mês</div><div class="stat-source">Robert Half 2026</div></div>
+<div class="stat-card"><div class="stat-number">2,5M</div><div class="stat-label">AI Engineers necessários até 2027</div><div class="stat-source">McKinsey</div></div>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 3: SELECTOR -->
+<section id="selector">
+<div class="container">
+<span class="block-label">Bloco 3 — O Seletor</span>
+<h2 style="text-align:center">Qual dos três MBAs combina com o seu objetivo?</h2>
+<p style="text-align:center;color:var(--muted);margin-top:8px">Em menos de 30 segundos, entenda qual programa foi feito para onde você quer chegar.</p>
+<div class="selector-grid">
+<!-- DA&AI -->
+<div class="selector-card green">
+<div class="emoji">📊</div>
+<h3>MBA Data Analytics & AI</h3>
+<p class="tagline">"Quero ser a pessoa que traduz dados em estratégia — automatiza processos, constrói dashboards executivos e lidera com IA."</p>
+<p class="profiles"><strong>Perfis típicos:</strong> Coordenadores de marketing, operações, finanças, RH · Profissionais não-técnicos querendo ser data-driven · Analistas adicionando IA</p>
+<p class="builds"><strong>O que constrói:</strong> Dashboards, workflows com IA, bots de RPA, análises estratégicas com SQL e Python</p>
+<p class="result tag-green">→ Analista de Dados & IA / Especialista Analytics & Automação</p>
+<a href="#daai" class="card-btn">Ver o MBA Data Analytics & AI →</a>
+</div>
+<!-- AI&ML -->
+<div class="selector-card blue">
+<div class="emoji">🤖</div>
+<h3>MBA Artificial Intelligence & ML</h3>
+<p class="tagline">"Quero ser o profissional técnico que engenheira IA — treina modelos, implementa agents e leva sistemas para produção."</p>
+<p class="profiles"><strong>Perfis típicos:</strong> Devs e engenheiros de software · Analistas técnicos · Background STEM · Quem busca mercado internacional</p>
+<p class="builds"><strong>O que constrói:</strong> Chatbots com LLMs, sistemas RAG, AI Agents com LangGraph/CrewAI, pipelines de MLOps</p>
+<p class="result tag-blue">→ AI Engineer / ML Engineer / AI Solutions Specialist</p>
+<a href="#aiml" class="card-btn">Ver o MBA AI & Machine Learning →</a>
+</div>
+<!-- DS&AI -->
+<div class="selector-card purple">
+<div class="emoji">🔬</div>
+<h3>MBA Data Science & AI</h3>
+<p class="tagline">"Quero ser o especialista que usa estatística, machine learning e IA para prever comportamentos e criar modelos preditivos."</p>
+<p class="profiles"><strong>Perfis típicos:</strong> Pessoas sem experiência técnica querendo entrar na carreira de maior demanda · Transição completa para dados e IA</p>
+<p class="builds"><strong>O que constrói:</strong> Modelos de ML, análises estatísticas, projetos de NLP, sistemas de recomendação</p>
+<p class="result tag-purple">→ Cientista de Dados / Data Scientist</p>
+<a href="#dsai" class="card-btn">Ver o MBA Data Science & AI →</a>
+</div>
+</div>
+<div style="text-align:center;margin-top:40px">
+<p style="color:var(--muted);margin-bottom:16px">Não tem certeza? Nossa consultoria é gratuita e leva 30 minutos.</p>
+<a href="#form" class="btn btn-primary">Reserve agora — sem custo</a>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 4: COMPARISON TABLE -->
+<section id="comparacao" style="background:var(--surface)">
+<div class="container">
+<span class="block-label">Bloco 4 — Tabela Comparativa</span>
+<h2 style="text-align:center">Compare os três programas</h2>
+<div class="comparison-table-wrap">
+<table class="comparison-table">
+<thead><tr><th></th><th class="tag-green">MBA DA & AI</th><th class="tag-blue">MBA AI & ML</th><th class="tag-purple">MBA DS & AI</th></tr></thead>
+<tbody>
+<tr><td>Tagline</td><td>O Executor de Negócios</td><td>O Engenheiro de IA</td><td>O Arquiteto Técnico</td></tr>
+<tr><td>Para quem</td><td>Profissionais de negócio</td><td>Desenvolvedores / Engenheiros</td><td>Quem quer virar Data Scientist</td></tr>
+<tr><td>Entrada técnica</td><td>Sem experiência em código</td><td>Background técnico recomendado</td><td>Sem experiência em código</td></tr>
+<tr><td>Duração</td><td>9 meses</td><td>10 meses</td><td>~10 meses</td></tr>
+<tr><td>Horas</td><td>680h</td><td>~800h</td><td>~720h</td></tr>
+<tr><td>Projetos</td><td>18</td><td>20</td><td>22</td></tr>
+<tr><td>Diploma MEC</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>Certificação AWS</td><td>—</td><td>✅ 2 selos ML</td><td>✅ 2 selos ML</td></tr>
+<tr><td>Certificado ASU</td><td>—</td><td>✅</td><td>✅</td></tr>
+<tr><td>Garantia de emprego</td><td>✅ 6 meses</td><td>✅ 6 meses</td><td>✅ 6 meses</td></tr>
+<tr><td>Salário júnior</td><td>R$ 7.300</td><td>R$ 19.500</td><td>R$ 9.200</td></tr>
+<tr><td>Salário sênior</td><td>R$ 18.100</td><td>R$ 27.100</td><td>R$ 23.000</td></tr>
+</tbody>
+</table>
+</div>
+<p style="text-align:center;color:var(--muted);margin-top:20px;font-size:.82rem">Fonte: Robert Half Salary Guide Brazil 2026</p>
+</div>
+</section>
+
+<!-- BLOCO 5: DEEP DIVES -->
+<section id="deep-dives">
+<div class="container">
+<span class="block-label">Bloco 5 — Deep Dive por MBA</span>
+<h2 style="text-align:center;margin-bottom:48px">Conheça cada MBA em detalhe</h2>
+
+<div class="deep-dive green-accent" id="daai">
+<h3>📊 MBA Data Analytics & AI — O Executor de Negócios</h3>
+<p class="oneliner">"Analytics aplicada, automação com IA e portfólio real — em 9 meses."</p>
+<p>Toda empresa hoje precisa de profissionais que transformem dados em decisões e IA em eficiência operacional. Não programadores. Executores. Pessoas que sabem o que perguntar para os dados — e como automatizar o que a resposta pede.</p>
+<table class="module-table">
+<thead><tr><th>Módulo</th><th>O que você faz</th></tr></thead>
+<tbody>
+<tr><td>Fundamentos de Analytics (1–6)</td><td>Prompt engineering, chatbots com IA, SQL, análise de funis, métricas de negócio</td></tr>
+<tr><td>Profundidade Analítica (7–13)</td><td>Python com Pandas, estatística, Power BI, Tableau, dashboards executivos</td></tr>
+<tr><td>Automação com IA (14–18)</td><td>AI automation, AI Agents, APIs, Zapier, RPA com UiPath, capstone completo</td></tr>
+</tbody>
+</table>
+<div class="salary-mini">
+<div><div class="level">Júnior</div><div class="amount tag-green">R$ 7.300</div></div>
+<div><div class="level">Pleno</div><div class="amount tag-green">R$ 10.250</div></div>
+<div><div class="level">Sênior</div><div class="amount tag-green">R$ 18.100</div></div>
+</div>
+<p style="font-size:.8rem;color:var(--muted)">Concorrência: FGV (R$ 49k, 20mo, 0 garantia) · FIAP BI (360h) · USP/Esalq (DS, não analytics)</p>
+<a href="#form" class="btn btn-primary" style="margin-top:16px">Agendar consultoria para o MBA DA & AI →</a>
+</div>
+
+<div class="deep-dive blue-accent" id="aiml">
+<h3>🤖 MBA AI & Machine Learning — O Engenheiro de IA</h3>
+<p class="oneliner">"Build, deploy, and scale real-world AI systems — em 10 meses."</p>
+<p>Quem consegue pegar um LLM, construir um sistema RAG, desenvolver um AI Agent com memória e ferramentas integradas, e colocar tudo em produção com CI/CD e monitoramento? Esses profissionais são raros — e os mais bem pagos do setor.</p>
+<table class="module-table">
+<thead><tr><th>Módulo</th><th>O que você faz</th></tr></thead>
+<tbody>
+<tr><td>IA na Prática (1–4)</td><td>Prompt engineering, LLMs, chatbots, automação, APIs e webhooks</td></tr>
+<tr><td>Fundamentos Técnicos (5–9)</td><td>Python, preparação de dados, SQL, estatística, álgebra linear</td></tr>
+<tr><td>Machine Learning Core (10–14)</td><td>ML supervisionado/não-supervisionado, feature engineering, gradient boosting, explicabilidade</td></tr>
+<tr><td>AI Engineering (15–20)</td><td>NLP + embeddings, LLMs + RAG, AI Agents (LangGraph, CrewAI), MLOps, governança, capstone</td></tr>
+</tbody>
+</table>
+<div class="salary-mini">
+<div><div class="level">Júnior</div><div class="amount tag-blue">R$ 19.500</div></div>
+<div><div class="level">Pleno</div><div class="amount tag-blue">R$ 20.200+</div></div>
+<div><div class="level">Sênior</div><div class="amount tag-blue">R$ 27.100</div></div>
+</div>
+<p style="font-size:.8rem;color:var(--muted)">Concorrência: FIAP AI Engineering (360h, sem ML foundations, sem garantia, preço opaco)</p>
+<a href="#form" class="btn btn-primary" style="margin-top:16px">Agendar consultoria para o MBA AI & ML →</a>
+</div>
+
+<div class="deep-dive purple-accent" id="dsai">
+<h3>🔬 MBA Data Science & AI — O Arquiteto Técnico</h3>
+<p class="oneliner">"Machine learning, modelagem estatística e IA aplicada — com diploma MEC e garantia de emprego."</p>
+<p>Ciência de Dados é uma das carreiras de maior crescimento global. Este MBA estrutura o caminho: from zero to professional, com projetos reais a cada etapa e a segurança de uma garantia de emprego em contrato.</p>
+<table class="module-table">
+<thead><tr><th>Módulo</th><th>O que você faz</th></tr></thead>
+<tbody>
+<tr><td>Fundamentos</td><td>SQL, Python, estatística, pré-processamento de dados</td></tr>
+<tr><td>Machine Learning</td><td>ML supervisionado/não-supervisionado, deep learning, redes neurais</td></tr>
+<tr><td>Especialização</td><td>NLP, sistemas de recomendação, IA generativa, deploy de modelos</td></tr>
+</tbody>
+</table>
+<div class="salary-mini">
+<div><div class="level">Júnior</div><div class="amount tag-purple">R$ 9.200</div></div>
+<div><div class="level">Pleno</div><div class="amount tag-purple">R$ 14.500</div></div>
+<div><div class="level">Sênior</div><div class="amount tag-purple">R$ 23.000</div></div>
+</div>
+<p style="font-size:.8rem;color:var(--muted)">Concorrência: FIAP DS&AI · USP/ESALQ · USP/ICMC — nenhum com garantia de emprego</p>
+<a href="#form" class="btn btn-primary" style="margin-top:16px">Agendar consultoria para o MBA DS & AI →</a>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 6: SHARED DIFFERENTIATORS -->
+<section style="background:var(--surface)" id="diferenciais">
+<div class="container">
+<span class="block-label">Bloco 6 — Diferenciais Compartilhados</span>
+<h2 style="text-align:center">Independente do MBA escolhido: isto nenhum concorrente oferece</h2>
+<div class="diff-grid">
+<div class="diff-card"><div class="diff-icon">✅</div><h4>Garantia de emprego — a única do mercado</h4><p>Encontre emprego em até 6 meses após se formar — ou devolvemos 100% do valor. Nenhum outro MBA no Brasil oferece isso.</p></div>
+<div class="diff-card"><div class="diff-icon">🏛️</div><h4>Diploma reconhecido pelo MEC</h4><p>Pós-Graduação Lato Sensu · Faculdade Sirius (nota 5) · Válido para concursos · Emitido em inglês</p></div>
+<div class="diff-card"><div class="diff-icon">🌍</div><h4>TripleTen + Nebius (Nasdaq)</h4><p>Empresa global de tecnologia · 10+ países · 5.000+ alunos formados · Credibilidade internacional</p></div>
+<div class="diff-card"><div class="diff-icon">📁</div><h4>18–22 projetos reais</h4><p>Portfólio que prova execução, não apenas aprendizado. Sistemas funcionais no GitHub = prova para entrevistas.</p></div>
+<div class="diff-card"><div class="diff-icon">👩‍🏫</div><h4>Tutoria 1:1 a cada sprint</h4><p>Profissional sênior revisa seu projeto, tira dúvidas técnicas e aponta o próximo passo. Não é fórum — é mentoria real.</p></div>
+<div class="diff-card"><div class="diff-icon">🤖</div><h4>Dot — IA como apoio pedagógico</h4><p>Assistente IA 24h — identifica erros, explica conceitos e ajuda quando o tutor não está. Sem substituir o atendimento humano.</p></div>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 6.5: CARREIRA INTERNACIONAL -->
+<section id="passaporte-global">
+<div class="container">
+<span class="block-label" style="background:rgba(9,132,227,.15);color:#0984e3">Bloco 6.5 — O Passaporte Global</span>
+<h2 style="text-align:center">O único MBA no Brasil construído para carreiras globais</h2>
+<p style="text-align:center;color:var(--muted);max-width:800px;margin:12px auto 40px;font-size:1.05rem">FGV, USP e FIAP são excelentes para o mercado local. Mas a IA não tem fronteiras — e o seu diploma também não deveria ter.</p>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px">
+<div>
+<h3 style="color:var(--accent2);margin-bottom:12px;font-size:1.1rem">Raízes no Silicon Valley, Padrão Global</h3>
+<p style="color:var(--muted);font-size:.9rem;margin-bottom:24px">Nascemos nos EUA e hoje fazemos parte da Nebius (NASDAQ: NBIS), gigante global de tecnologia. Nosso currículo não é acadêmico de prateleira — é desenhado para o que as big techs americanas exigem hoje.</p>
+<h3 style="color:var(--accent2);margin-bottom:12px;font-size:1.1rem">O Filtro Internacional</h3>
+<p style="color:var(--muted);font-size:.9rem">O mercado estrangeiro não contrata pelo nome da sua faculdade brasileira. Ele exige <strong>portfólio em inglês</strong> e <strong>certificações globais</strong>. Por isso, nossos MBAs entregam até 2 selos AWS ML — exatamente o que recrutadores remotos buscam antes de olhar seu CV.</p>
+</div>
+<div style="background:var(--surface);border-radius:16px;padding:32px;display:flex;flex-direction:column;justify-content:center;border:1px solid rgba(162,155,254,.2)">
+<p style="font-size:1.1rem;font-weight:700;line-height:1.6;text-align:center">"Trabalhe nos melhores bancos e startups da Faria Lima. Ou ganhe em dólar e euro trabalhando remotamente. Com a TripleTen, a escolha é sua."</p>
+<div style="display:flex;justify-content:center;gap:12px;margin-top:24px;font-size:1.5rem">🇧🇷 🇺🇸 🇪🇺 🇨🇦</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 7: COMPETITOR COMPARISON -->
+<section id="concorrentes">
+<div class="container">
+<span class="block-label">Bloco 7 — Comparação Competitiva</span>
+<h2 style="text-align:center">Como nos comparamos com FGV, FIAP, USP e outros</h2>
+<p style="text-align:center;color:var(--muted);margin-top:8px;margin-bottom:8px">A comparação que nenhum concorrente quer que você faça.</p>
+<div class="comp-table-wrap">
+<table class="comp-table">
+<thead><tr><th></th><th>FGV</th><th>FIAP</th><th>USP/Esalq</th><th>Descomplica</th><th class="tt-col" style="color:var(--accent2)">TripleTen</th></tr></thead>
+<tbody>
+<tr><td>Foco Carreira</td><td>🇧🇷 Local</td><td>🇧🇷 Local</td><td>🇧🇷 Local</td><td>🇧🇷 Local</td><td class="tt-col" style="font-weight:700;color:#0984e3">🌎 Global (BR/Exterior)</td></tr>
+<tr><td>Diploma MEC</td><td>✅</td><td>✅</td><td>✅</td><td>⚠️</td><td class="tt-col" style="font-weight:700">✅</td></tr>
+<tr><td>Garantia emprego</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td class="tt-col" style="font-weight:700;color:#00b894">✅ 100%</td></tr>
+<tr><td>Projetos reais</td><td>0–3</td><td>0–3</td><td>1</td><td>0</td><td class="tt-col" style="font-weight:700">18–22</td></tr>
+<tr><td>Horas</td><td>432h</td><td>360–400h</td><td>385h</td><td>N/D</td><td class="tt-col" style="font-weight:700">680–800h</td></tr>
+<tr><td>Duração</td><td>14–20mo</td><td>10–12mo</td><td>18mo</td><td>12–18mo</td><td class="tt-col" style="font-weight:700">9–10mo</td></tr>
+<tr><td>Tutoria 1:1</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td class="tt-col" style="font-weight:700;color:#00b894">✅</td></tr>
+<tr><td>Aceleração carreira</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td class="tt-col" style="font-weight:700;color:#00b894">✅</td></tr>
+<tr><td>AI Agents</td><td>❌</td><td>✅</td><td>❌</td><td>❌</td><td class="tt-col" style="font-weight:700;color:#00b894">✅</td></tr>
+<tr><td>MLOps / Produção</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td class="tt-col" style="font-weight:700;color:#00b894">✅</td></tr>
+<tr><td>Preço (aprox.)</td><td>R$ 41–55k</td><td>R$ 14–35k</td><td>R$ 12–14k</td><td>R$ 1.8k</td><td class="tt-col" style="font-weight:700">[TBC]</td></tr>
+</tbody>
+</table>
+</div>
+<div style="text-align:center;margin-top:28px;padding:20px;background:var(--card);border-radius:12px;border:1px solid var(--border)">
+<p style="font-size:1.05rem;font-weight:700;font-style:italic">"Eles vendem diplomas. Nós entregamos diplomas + portfólio + carreira + garantia."</p>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 8: SALARY MAP -->
+<section style="background:var(--surface)" id="salarios">
+<div class="container">
+<span class="block-label">Bloco 8 — Salários</span>
+<h2 style="text-align:center;margin-bottom:8px">Onde você pode chegar — e quando</h2>
+<p style="text-align:center;color:var(--muted);margin-bottom:8px;font-size:.85rem">Fonte: Robert Half Salary Guide Brazil 2026 / Jobicy 2026 / PwC 2025</p>
+<div class="salary-grid">
+<div class="salary-column" style="border-top:3px solid #00b894">
+<h4 class="tag-green">MBA DA & AI</h4>
+<div class="salary-row"><span class="label">Júnior</span><span class="value">R$ 7.300</span></div>
+<div class="salary-row"><span class="label">Pleno</span><span class="value">R$ 10.250</span></div>
+<div class="salary-row"><span class="label">Sênior</span><span class="value">R$ 18.100</span></div>
+<div class="salary-row" style="margin-top:8px;border-top:1px solid var(--border);padding-top:12px"><span class="label">Payback</span><span class="value" style="color:#00b894">~4 meses</span></div>
+</div>
+<div class="salary-column" style="border-top:3px solid #0984e3">
+<h4 class="tag-blue">MBA AI & ML</h4>
+<div class="salary-row"><span class="label">Júnior</span><span class="value">R$ 19.500</span></div>
+<div class="salary-row"><span class="label">Pleno</span><span class="value">R$ 20.200+</span></div>
+<div class="salary-row"><span class="label">Sênior</span><span class="value">R$ 27.100</span></div>
+<div class="salary-row" style="margin-top:8px;border-top:1px solid var(--border);padding-top:12px"><span class="label">Payback</span><span class="value" style="color:#0984e3">~2–3 meses</span></div>
+</div>
+<div class="salary-column" style="border-top:3px solid #6c5ce7">
+<h4 class="tag-purple">MBA DS & AI</h4>
+<div class="salary-row"><span class="label">Júnior</span><span class="value">R$ 9.200</span></div>
+<div class="salary-row"><span class="label">Pleno</span><span class="value">R$ 14.500</span></div>
+<div class="salary-row"><span class="label">Sênior</span><span class="value">R$ 23.000</span></div>
+<div class="salary-row" style="margin-top:8px;border-top:1px solid var(--border);padding-top:12px"><span class="label">Payback</span><span class="value" style="color:#6c5ce7">~3 meses</span></div>
+</div>
+</div>
+<div style="text-align:center;margin-top:32px;padding:20px;background:var(--card);border-radius:12px;border:1px solid var(--border)">
+<p style="font-size:.9rem;color:var(--muted)"><strong style="color:var(--text)">Mercado internacional:</strong> AI Engineer Sênior (EUA): até US$ 52.200/ano · Portugal: €3.000–€5.500/mês</p>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 9: STUDENT JOURNEY -->
+<section id="jornada">
+<div class="container">
+<span class="block-label">Bloco 9 — Jornada do Aluno</span>
+<h2 style="text-align:center">Como é estudar na TripleTen</h2>
+<p style="text-align:center;color:var(--muted);margin-top:8px">Não é uma série de videoaulas. É um programa estruturado, sprint a sprint, com projetos reais e tutoria individual.</p>
+<div class="journey-steps">
+<div class="journey-step"><div class="step-num">1</div><div class="step-content"><h4>Consultoria de carreira (gratuita)</h4><p>Entendemos seu background, objetivos e cronograma. Recomendamos o MBA certo — sem compromisso de matrícula.</p></div></div>
+<div class="journey-step"><div class="step-num">2</div><div class="step-content"><h4>Acesso imediato à plataforma</h4><p>No dia da matrícula, você já acessa a plataforma interativa com Dot (assistente IA) disponível 24h.</p></div></div>
+<div class="journey-step"><div class="step-num">3</div><div class="step-content"><h4>Sprints de 2 semanas — 1 projeto por sprint</h4><p>Teoria, exercícios e um projeto real a cada sprint. Feedback do tutor em cada entrega.</p></div></div>
+<div class="journey-step"><div class="step-num">4</div><div class="step-content"><h4>Tutoria 1:1 a cada sprint</h4><p>Sessão individual com profissional sênior. Revisão de projeto, dúvidas técnicas, planejamento da próxima entrega.</p></div></div>
+<div class="journey-step"><div class="step-num">5</div><div class="step-content"><h4>Carreira e Passaporte Global</h4><p>Revisão de CV/LinkedIn para empresas do BR e exterior. Preparação para live coding (inglês/PT). Garantia de emprego ativa: 6 meses ou devolvemos 100%.</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 10: FAQ -->
+<section style="background:var(--surface)" id="faq">
+<div class="container">
+<span class="block-label">Bloco 10 — FAQ</span>
+<h2 style="text-align:center">Perguntas frequentes — MBAs em IA e Dados</h2>
+<div class="faq-list">
+<div class="faq-item"><div class="faq-q">O MBA prepara para vagas internacionais/remotas?</div><div class="faq-a"><strong>Sim.</strong> Somos o único MBA brasileiro com forte DNA global (escola com raízes nos EUA, parte do ecossistema Nebius - NASDAQ). Entregamos portfólio prático (que empresas estrangeiras exigem) e certificações globais como AWS Machine Learning. Alumni nossos trabalham nas maiores empresas do Brasil e remotamente para EUA e Europa.</div></div>
+<div class="faq-item"><div class="faq-q">Qual a diferença entre os três MBAs da TripleTen?</div><div class="faq-a"><strong>MBA DA&AI</strong> → profissional que usa dados e IA para decisões de negócio e automação. <strong>MBA AI&ML</strong> → profissional que constrói sistemas de IA — LLMs, agentes, MLOps. <strong>MBA DS&AI</strong> → profissional que treina modelos de ML e faz análise estatística avançada.</div></div>
+<div class="faq-item"><div class="faq-q">Preciso saber programar?</div><div class="faq-a">Para MBA DA&AI e DS&AI: não. Para MBA AI&ML: background técnico é fortemente recomendado.</div></div>
+<div class="faq-item"><div class="faq-q">Os MBAs têm garantia de emprego?</div><div class="faq-a">Sim. Os três programas: se não encontrar emprego em até 6 meses, devolvemos 100%. A única garantia do mercado de MBAs brasileiro.</div></div>
+<div class="faq-item"><div class="faq-q">O diploma é reconhecido pelo MEC?</div><div class="faq-a">Sim. Faculdade Sirius, nota 5 (máxima). Válido para concursos públicos. Emitido em inglês.</div></div>
+<div class="faq-item"><div class="faq-q">Qual a diferença entre MBA e bootcamp?</div><div class="faq-a">Bootcamps = primeiro emprego, sem diploma. MBAs = pós-graduação MEC, formação mais profunda, certificações internacionais (AWS, ASU), perfis de maior senioridade.</div></div>
+<div class="faq-item"><div class="faq-q">O MBA é presencial ou online?</div><div class="faq-a">100% online. Sessões ao vivo gravadas. Horários flexíveis. Carga semanal: 15–20 horas.</div></div>
+<div class="faq-item"><div class="faq-q">Consigo conciliar com o trabalho?</div><div class="faq-a">Sim. 15–20h/semana com flexibilidade. +80% dos alunos trabalham full-time durante o MBA.</div></div>
+<div class="faq-item"><div class="faq-q">Qual MBA paga mais rápido o investimento?</div><div class="faq-a">MBA AI&ML: AI Engineers júniors ganham R$ 19.500/mês — payback em 2–3 meses. MBA DS&AI ~3 meses. MBA DA&AI ~4 meses.</div></div>
+<div class="faq-item"><div class="faq-q">Qual MBA para trabalhar no exterior?</div><div class="faq-a">MBA AI&ML: diploma MEC + 2 AWS ML Certifications + projetos em inglês + ASU certificate. O perfil que passa em filtros de contratação americanos.</div></div>
+<div class="faq-item"><div class="faq-q">A TripleTen tem credibilidade internacional?</div><div class="faq-a">Sim. Parte da Nebius (NASDAQ: NBIS). 10+ países. 5.000+ alunos. Diplomas emitidos em inglês.</div></div>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 11: SOCIAL PROOF -->
+<section id="depoimentos">
+<div class="container">
+<span class="block-label">Bloco 11 — Depoimentos</span>
+<h2 style="text-align:center;margin-bottom:40px">Quem já fez a mudança conta como foi</h2>
+<div class="selector-grid">
+<div class="selector-card green" style="border-top-width:3px">
+<p style="font-size:.75rem;color:#00b894;font-weight:700;margin-bottom:8px">MBA DA & AI</p>
+<p style="font-style:italic;font-size:.9rem;margin-bottom:16px;color:var(--muted)">"Eu coordenava marketing há 6 anos. O MBA me deu analytics, IA e automação — sem precisar largar minha carreira para começar do zero."</p>
+<p style="font-size:.82rem"><strong>[Nome]</strong> · Antes: Coordenadora de Marketing · Depois: Analytics Specialist</p>
+</div>
+<div class="selector-card blue" style="border-top-width:3px">
+<p style="font-size:.75rem;color:#0984e3;font-weight:700;margin-bottom:8px">MBA AI & ML</p>
+<p style="font-style:italic;font-size:.9rem;margin-bottom:16px;color:var(--muted)">"Escrevia código todo dia, mas a IA ficava em outro time. Depois do MBA, construí o primeiro agente de IA da empresa. Em seis meses."</p>
+<p style="font-size:.82rem"><strong>[Nome]</strong> · Antes: Dev Backend · Depois: AI Engineer</p>
+</div>
+<div class="selector-card purple" style="border-top-width:3px">
+<p style="font-size:.75rem;color:#6c5ce7;font-weight:700;margin-bottom:8px">MBA DS & AI</p>
+<p style="font-style:italic;font-size:.9rem;margin-bottom:16px;color:var(--muted)">"Trabalhava em RH. A TripleTen foi o caminho mais estruturado para a transição — com projetos reais que provam que sei fazer."</p>
+<p style="font-size:.82rem"><strong>[Nome]</strong> · Antes: Analista de RH · Depois: Data Scientist</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 12: COMPANIES -->
+<section style="background:var(--surface)" id="empresas">
+<div class="container" style="text-align:center">
+<span class="block-label">Bloco 12 — Empresas</span>
+<h2>Nossos alunos formados trabalham em startups e grandes companhias</h2>
+<p style="color:var(--muted);margin-top:12px;font-size:.9rem">[Logos: Tesla · Spotify · Apple · Deloitte · Nubank · iFood · Oracle · AWS · Mercado Livre]</p>
+<div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:center;margin-top:32px;opacity:.5">
+<div style="background:var(--card);padding:16px 32px;border-radius:8px;font-weight:700;font-size:.85rem">Tesla</div>
+<div style="background:var(--card);padding:16px 32px;border-radius:8px;font-weight:700;font-size:.85rem">Spotify</div>
+<div style="background:var(--card);padding:16px 32px;border-radius:8px;font-weight:700;font-size:.85rem">Apple</div>
+<div style="background:var(--card);padding:16px 32px;border-radius:8px;font-weight:700;font-size:.85rem">Deloitte</div>
+<div style="background:var(--card);padding:16px 32px;border-radius:8px;font-weight:700;font-size:.85rem">Nubank</div>
+<div style="background:var(--card);padding:16px 32px;border-radius:8px;font-weight:700;font-size:.85rem">iFood</div>
+<div style="background:var(--card);padding:16px 32px;border-radius:8px;font-weight:700;font-size:.85rem">Oracle</div>
+<div style="background:var(--card);padding:16px 32px;border-radius:8px;font-weight:700;font-size:.85rem">AWS</div>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 13: MID-PAGE CTA -->
+<section style="text-align:center">
+<div class="container">
+<span class="block-label">Bloco 13 — CTA Intermediário</span>
+<h2>Pronto para encontrar o MBA certo para você?</h2>
+<p style="color:var(--muted);margin:16px auto 32px;max-width:600px">A consultoria de carreira da TripleTen é gratuita, personalizada e leva 30 minutos. Sem compromisso de matrícula.</p>
+<a href="#form" class="btn btn-primary">Agendar minha consultoria gratuita →</a>
+<p style="color:var(--muted);margin-top:16px;font-size:.82rem">Disponibilidade limitada por turma. Próximas turmas: [DATA]</p>
+</div>
+</section>
+
+<!-- BLOCO 14: PATH VISUALIZER -->
+<section style="background:var(--surface)" id="trilhas">
+<div class="container">
+<span class="block-label">Bloco 14 — Três Caminhos</span>
+<div class="path-viz">
+<h2>Qual é a sua trilha?</h2>
+<p style="color:var(--muted);margin-top:8px;font-size:.9rem">Três objetivos. Três programas. Todos com MEC + Projetos + Tutoria + Garantia.</p>
+<div class="path-row">
+<div class="path-card" style="border-top:3px solid #00b894">
+<div class="path-label">"Quero usar dados e IA para negócios"</div>
+<div class="path-mba tag-green">MBA DA & AI (9 meses)</div>
+<div class="path-role">Analytics Specialist</div>
+<div class="path-salary" style="color:#00b894">R$ 18.100/mês</div>
+</div>
+<div class="path-card" style="border-top:3px solid #0984e3">
+<div class="path-label">"Quero construir sistemas de IA"</div>
+<div class="path-mba tag-blue">MBA AI & ML (10 meses)</div>
+<div class="path-role">AI Engineer</div>
+<div class="path-salary" style="color:#0984e3">R$ 27.100/mês</div>
+</div>
+<div class="path-card" style="border-top:3px solid #6c5ce7">
+<div class="path-label">"Quero me tornar Cientista de Dados"</div>
+<div class="path-mba tag-purple">MBA DS & AI (~10 meses)</div>
+<div class="path-role">Data Scientist</div>
+<div class="path-salary" style="color:#6c5ce7">R$ 23.000/mês</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- BLOCO 15: FINAL CTA + FORM -->
+<section class="cta-section" id="form">
+<div class="container">
+<span class="block-label">Bloco 15 — CTA Final + Formulário</span>
+<h2>Comece agora — a consultoria é gratuita</h2>
+<p>Entenda qual dos três MBAs combina com o seu objetivo. Transparência total sobre currículo, carga horária, preço e parcelamento.</p>
+<form class="cta-form" onsubmit="return false">
+<input type="text" placeholder="Nome completo" id="name">
+<input type="email" placeholder="Email" id="email">
+<input type="tel" placeholder="WhatsApp" id="phone">
+<select id="mba-interest">
+<option value="" disabled selected>Qual MBA te interessa?</option>
+<option value="daai">MBA Data Analytics & AI</option>
+<option value="aiml">MBA Artificial Intelligence & ML</option>
+<option value="dsai">MBA Data Science & AI</option>
+<option value="unsure">Não sei ainda</option>
+</select>
+<button type="submit" class="btn btn-primary" style="width:100%;text-align:center">Quero minha consultoria gratuita →</button>
+</form>
+<p style="color:var(--muted);font-size:.75rem;margin-top:16px">Ao enviar, você concorda com os termos de uso e política de privacidade da TripleTen.</p>
+</div>
+</section>
+
+<!-- BLOCO 16: FOOTER -->
+<footer style="padding:48px 0;border-top:1px solid var(--border)">
+<div class="container" style="text-align:center">
+<span class="block-label">Bloco 16 — Footer</span>
+<p style="font-size:.82rem;color:var(--muted);margin-bottom:16px">Links internos (SEO)</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:24px">
+<a href="#" style="color:var(--accent2);font-size:.82rem;text-decoration:none">MBA Data Analytics & AI</a>
+<a href="#" style="color:var(--accent2);font-size:.82rem;text-decoration:none">MBA AI & Machine Learning</a>
+<a href="#" style="color:var(--accent2);font-size:.82rem;text-decoration:none">MBA Data Science & AI</a>
+<a href="#" style="color:var(--accent2);font-size:.82rem;text-decoration:none">Comparação de todos os MBAs</a>
+<a href="#" style="color:var(--accent2);font-size:.82rem;text-decoration:none">Garantia de emprego</a>
+<a href="#" style="color:var(--accent2);font-size:.82rem;text-decoration:none">Depoimentos</a>
+<a href="#" style="color:var(--accent2);font-size:.82rem;text-decoration:none">Certificações — AWS, ASU, MEC</a>
+</div>
+<p style="font-size:.7rem;color:var(--border)">MBA em IA Brasil · MBA em Machine Learning · Pós-graduação Inteligência Artificial online · MBA com garantia de emprego · MBA Data Science · MBA Analytics online MEC · TripleTen MBA</p>
+<p style="font-size:.7rem;color:var(--border);margin-top:8px">© 2026 TripleTen · Parte da Nebius (NASDAQ: NBIS)</p>
+</div>
+</footer>
+
+</body>
+</html>
