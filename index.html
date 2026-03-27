@@ -171,17 +171,50 @@ section{padding:60px 0}
 <span id="btn-pt" onclick="toggleLang('pt')" style="font-size:0.8rem;font-weight:700;padding:6px 16px;border-radius:100px;background:var(--card);color:#fff;border:1px solid var(--border);cursor:pointer;transition:all 0.3s">🇧🇷 PT-BR</span>
 <span id="btn-en" onclick="toggleLang('en')" style="font-size:0.8rem;font-weight:600;padding:6px 16px;color:var(--muted);border:1px solid transparent;border-radius:100px;cursor:pointer;transition:all 0.3s" onmouseover="if(this.style.color!=='rgb(255, 255, 255)') this.style.color='#fff'" onmouseout="if(this.style.background==='transparent' || this.style.background==='') this.style.color='var(--muted)'">🇺🇸 EN</span>
 </div>
+<style>
+/* Hide Google Translate UI elements to keep the custom design */
+body { top: 0px !important; position: static !important; }
+.skiptranslate iframe { display: none !important; }
+#google_translate_element { display: none !important; }
+.goog-te-spinner-pos { display: none !important; }
+.goog-tooltip { display: none !important; }
+.goog-tooltip:hover { display: none !important; }
+.goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+</style>
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'pt',
+    includedLanguages: 'en,pt',
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script>
+function triggerGoogleTranslate(lang) {
+  var combo = document.querySelector('.goog-te-combo');
+  if (combo) {
+    combo.value = lang;
+    combo.dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
+  } else {
+    // Retry in case Google Translate hasn't fully loaded yet
+    setTimeout(function() { triggerGoogleTranslate(lang); }, 300);
+  }
+}
+
 function toggleLang(lang) {
   const btnPt = document.getElementById('btn-pt');
   const btnEn = document.getElementById('btn-en');
   if (lang === 'en') {
     btnEn.style.background = 'var(--card)'; btnEn.style.color = '#fff'; btnEn.style.border = '1px solid var(--border)'; btnEn.style.fontWeight = '700';
     btnPt.style.background = 'transparent'; btnPt.style.color = 'var(--muted)'; btnPt.style.border = '1px solid transparent'; btnPt.style.fontWeight = '600';
-    alert('🇺🇸 English version activated.\n(Designer reference: The CMS will map the EN translation dynamically when this is clicked.)');
+    triggerGoogleTranslate('en');
   } else {
     btnPt.style.background = 'var(--card)'; btnPt.style.color = '#fff'; btnPt.style.border = '1px solid var(--border)'; btnPt.style.fontWeight = '700';
     btnEn.style.background = 'transparent'; btnEn.style.color = 'var(--muted)'; btnEn.style.border = '1px solid transparent'; btnEn.style.fontWeight = '600';
+    triggerGoogleTranslate('pt');
   }
 }
 </script>
